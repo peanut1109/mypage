@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리버풀 FC 경기 일정</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #c8102e;
+            margin-bottom: 40px;
+        }
+
+        .match-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 80%;
+            margin: auto;
+        }
+
+        .match-card {
+            background: white;
+            border-radius: 30px;
+            padding: 100px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .match-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-logos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .team-logos img {
+            width: 130px;
+            height: 130px;
+        }
+
+        .versus {
+            font-size: 22px;
+            font-weight: bold;
+            color: #c8102e;
+        }
+
+        .match-info {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>리버풀 FC 경기 일정</h1>
+
+    <div class="match-container">
+
+        <!-- 경기 1 -->
+        <a href="ticket.html?match=리버풀 vs 맨체스터 시티 (안필드)">
+            <div class="match-card">
+                <div class="team-logos">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool Logo">
+                    <span class="versus">VS</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" alt="Man City Logo">
+                </div>
+                <div class="match-info">
+                    <strong>2025.03.12</strong><br>
+                    안필드
+                </div>
+            </div>
+        </a>
+
+        <!-- 경기 2 -->
+        <a href="ticket.html?match=첼시 vs 리버풀 (스탬포드 브릿지)">
+            <div class="match-card">
+                <div class="team-logos">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" alt="Chelsea Logo">
+                    <span class="versus">VS</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool Logo">
+                </div>
+                <div class="match-info">
+                    <strong>2025.03.20</strong><br>
+                    스탬포드 브릿지
+                </div>
+            </div>
+        </a>
+
+        <!-- 경기 3 -->
+        <a href="ticket.html?match=리버풀 vs 아스널 (안필드)">
+            <div class="match-card">
+                <div class="team-logos">
+                    <img src="https://upload.wikimedia.org/wikipedia/ko/5/5b/%EC%95%84%EC%8A%A4%EB%84%90_FC_%EB%A1%9C%EA%B3%A0.png?20161022023517" alt="Arsenal Logo">
+                    <span class="versus">VS</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool Logo">
+                </div>
+                <div class="match-info">
+                    <strong>2025.04.01</strong><br>
+                    안필드
+                </div>
+            </div>
+        </a>
+
+        <!-- 경기 4 -->
+        <a href="ticket.html?match=맨유 vs 리버풀 (올드 트래포드)">
+            <div class="match-card">
+                <div class="team-logos">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/7/7a/Manchester_United_FC_crest.svg" alt="Manchester United Logo">
+                    <span class="versus">VS</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool Logo">
+                </div>
+                <div class="match-info">
+                    <strong>2025.04.10</strong><br>
+                    올드 트래포드
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+</body>
+</html>

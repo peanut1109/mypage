@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>티켓 예약</title>
+
+<style>
+    body {
+        font-family: Arial;
+        background-color: #f2f2f2;
+        padding: 40px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #c8102e;
+        margin-bottom: 30px;
+    }
+
+    .ticket-box {
+        width: 700px;
+        background: white;
+        padding: 30px;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        text-align: left;
+    }
+
+    label {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    select, input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid #999;
+        font-size: 16px;
+    }
+
+    .seat-map {
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    .seat-map img {
+        width: 100%;
+        max-width: 650px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+
+    .reserve-btn {
+    display: block;            /* 양쪽 여백 제거 후 완전 블록화 */
+    width: 100%;               /* ticket-box 폭과 정확히 동일 */
+    text-align: center;
+    background: #c8102e;
+    color: white;
+    padding: 18px 0;           /* 좌우 패딩 제거 → 비대칭 현상 해결 */
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-sizing: border-box;    /* 패딩 포함 계산 → 깔끔하게 정렬 */
+    margin-top: 20px;          /* 위 간격만 유지 */
+}
+.reserve-btn:hover {
+    background: #a00d23;
+}
+
+</style>
+
+<script>
+    function submitTicket() {
+        alert("티켓이 성공적으로 예약되었습니다! You'll Never Walk Alone ❤️");
+    }
+</script>
+
+</head>
+<body>
+
+<h1>티켓 예약</h1>
+
+<div class="ticket-box">
+
+    <h2 id="match-title"></h2>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const match = urlParams.get("match");
+        document.getElementById("match-title").innerText = match;
+    </script>
+
+    <label>인원 선택</label>
+    <select>
+        <option>1명</option>
+        <option>2명</option>
+        <option>3명</option>
+        <option>4명</option>
+    </select>
+
+    <label>좌석 위치 선택</label>
+    <select>
+        <option>메인 스탠드</option>
+        <option>코프 스탠드</option>
+        <option>안필드 로드 스탠드</option>
+        <option>사우스 스탠드</option>
+    </select>
+
+    <!-- 가격 선택 -->
+<div class="form-group">
+    <label for="price">티켓 가격 선택</label>
+    <select id="price" name="price" required>
+        <option value="">가격을 선택하세요</option>
+        <option value="60000">₩60,000 — 일반석</option>
+        <option value="90000">₩90,000 — 중앙석</option>
+        <option value="120000">₩120,000 — 프리미엄석</option>
+        <option value="180000">₩180,000 — VIP석</option>
+    </select>
+</div>
+
+    <!-- ⭐ 좌석 배치 이미지 영역 추가 -->
+    <div class="seat-map">
+        <h3>좌석 배치도</h3>
+        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzA1MjdfMjM3%2FMDAxNDk1ODgzNjE3ODY2._b8HmvyVSlk8pCgUSsRDqLOUtqbnhJFzaYtffCO03bgg.iIZ9JGiN3mEfq4nPso243k40A6ntosp3fkDGnugAlzQg.PNG.samed03%2F%25A4%25A1.PNG&type=sc960_832" alt="Anfield Stadium Seat Map">
+    </div>
+
+    <div class="reserve-btn" onclick="submitTicket()">티켓 예약하기</div>
+
+</div>
+
+</body>
+</html>

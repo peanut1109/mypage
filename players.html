@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리버풀 FC 선수단</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #c8102e;
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .players-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .player-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-card:hover {
+            transform: scale(1.07);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* 기본 사진 */
+        .player-img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* hover 사진 (숨김) */
+        .hover-img {
+            width: 100%;
+            border-radius: 15px;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: 0.4s ease-in-out;
+            z-index: 2;
+        }
+
+        /* hover 시 등장 */
+        .player-card:hover .hover-img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .player-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #c8102e;
+            margin-top: 10px;
+        }
+
+        .player-info {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<h1>리버풀 FC 선수단</h1>
+
+<div class="players-container">
+
+    <!-- 알리송 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/ms1qAmEO0oXgQT9Zf8MYaStmMfezFkJOSlDuqPylnquk-vekJ9WRXTzH5Cm2qjR9bw7lYxL8as3No479CSM9IMn4Upz5nkClI8Gsa1di39GJLM6KAHWWTK6zIMn2Mvhf-3e0EqYVQGkQ3WSc4Hzkxg.webp">
+        <img class="hover-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F082%2F2021%2F05%2F17%2F0001091378_002_20210517113303051.jpg&type=a340">
+        <div class="player-name">알리송 베케르</div>
+        <div class="player-info">등번호 1<br>포지션 GK</div>
+    </div>
+
+    <!-- 켈러허 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/kHuXHcDEueRNc4XP1fuZeFDj6kYpHDIv3BAei_aqePQSwdv-gBWRbOicq5iWGShCqMxl-IIJhUm_WIIeeAPm3E0IxURQTQMuU36Mjbj0T89_ipPzqm94KKEG9sFA6OS1ZTF6pPVhs9XH8NWjK1x4_A.webp">
+        <img class="hover-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F117%2F2025%2F05%2F24%2F0003946512_002_20250524040017967.jpg&type=a340">
+        <div class="player-name">기오르기 마마르다슈빌리</div>
+        <div class="player-info">등번호 25<br>포지션 GK</div>
+    </div>
+
+    <!-- 반 다이크 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/xxp57TPqZUxV2_UcX2jYVX4NQY-rZcoy03ZFfpU30WQHiebNN5ROQXiJQpvB6WWU0VfoUShYTML33UScQlYdHlvOpYB2jSRcsulVSn_CNtsuwfuPCM0FNmdvzD3YJ1rCEsGwJtIbjrxONpsopBqqLQ.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2235998424/photo/liverpool-england-virgil-van-dijk-of-liverpool-celebrates-scoring-his-teams-third-goal-during.jpg?s=612x612&w=0&k=20&c=8FVVvsaZ_xWbvl7QP2PZRzZy-v2a_ceMW8U4uJE4XSo=">
+        <div class="player-name">버질 반 다이크</div>
+        <div class="player-info">등번호 4<br>포지션 CB</div>
+    </div>
+
+    <!-- 코나테 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/LaPItyKSW5ljqlP6SlJHpb-T7hpd21zX6ruRdUnVO8v0SDlJp51C0Z0mofc5gCHosZHd9IsqLXIK4pZ_Z6Diqs-mvvMpnVGpSPwKeahDRGZAB906Y4iXW5L3lq9XFgar1PFRK9qjbD_DyduRW0g7kQ.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2175286956/photo/wolverhampton-england-ibrahima-konate-of-liverpool-celebrates-scoring-the-first-goal-during.jpg?s=612x612&w=0&k=20&c=ZGGpyS0f80l8BwD_8Cw3WX5m2WahWuPOvV__jyXhhJo=">
+        <div class="player-name">이브라히마 코나테</div>
+        <div class="player-info">등번호 5<br>포지션 CB</div>
+    </div>
+
+    <!-- 조 고메즈 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/TMEVZivhDbpXEYHLIhiUfDQUSuPdTm6DXopjkdUNCM8ksf8u08-1qxGS7JjtYqdMGu6R_mOZ5fiZSVSM1xsnNj9Emg1YY53ToGfaOoW_vhcEQlLQs25urRdkjZl2W0YdNVSwglP4iADE2cD66c2HzA.webp">
+        <img class="hover-img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA2MTNfMjgy%2FMDAxNzE4MjgxMjMzODk4.4UZeV2awzc8ha58JVZnHJjI255Mq2fP2eMrILkTs5oQg.PnlhS_Hkaiau2ZG90KJir3SVLycomctfNG4jZYxKmrUg.JPEG%2F2023%25A3%25AD08%25A3%25AD27%25A3%25AD367%25A3%25ADNewcastle%25A3%25DFLiverpool.jpg&type=a340">
+        <div class="player-name">조 고메즈</div>
+        <div class="player-info">등번호 2<br>포지션 DF</div>
+    </div>
+
+    <!-- 로버트슨 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/L2KLWHKzjxLYN-lW0eMaSEl-3jozzbPd2qyOsk2z90PypYYiNFzyTvozmb7AsE-8GeMHXJqLjD6REG843CMwhkNt3L4nujNcbVJA0wGhWU0PXiJgd8KBJbj66hOHu3DAsU_4TvSIP0Mdk7PV9-VSjg.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/1684921154/photo/wolverhampton-england-andrew-robertson-of-liverpool-celebrates-after-scoring-their-sides.jpg?s=612x612&w=0&k=20&c=O2CsWv1iWnlGndHEWCAnbosGAMLGrzrTSf48NTuwtjo=">
+        <div class="player-name">앤드류 로버트슨</div>
+        <div class="player-info">등번호 26<br>포지션 LB</div>
+    </div>
+
+    <!-- 아놀드 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/QIGhZPje69Kniw-Y_imj57w0Qd4bx9vkEp0axQ8P65aWCAvXVbvJF8x0BOIPlAEvfIgTASoZsX6vt4QWG_Bmsq_goJGrvfe8IHxShplJ9Xo2w0q-v_oXV3UbXJd0UaUbVZh6UEcyXu1fLsCZ-Hm-Ew.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2236989151/photo/liverpool-england-alexander-isak-of-liverpool-celebrates-scoring-his-teams-first-goal-during.jpg?s=612x612&w=0&k=20&c=vHefM1QfP5q0qhZDaM7NqKJ7ZFfiU9GYJhv6F5PfnOY=">
+        <div class="player-name">알렉산더 이사크 </div>
+        <div class="player-info">등번호 9<br>포지션 ST</div>
+    </div>
+
+    <!-- 엔조 페르난데스 대체용 → 알렉시스 맥 알리스터 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/5VGWGRqlwXopVsOWjknu70nO_1fcU2iHdYgIFP9AFJ__S9yBjKzsxLe-FuBVNUZ-37jkAPxp7aLxlYnEVpxIFSJnxwFjZ2NZ6ha3ZN7vMsB1hK9XKmU2PHtjX0U0Bndk83U2fpvTVU6FImGJGRBjfQ.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2245024710/photo/liverpool-england-alexis-mac-allister-of-liverpool-celebrates-scoring-his-teams-first-goal.jpg?s=612x612&w=0&k=20&c=jn19da26Z3zD5DIyW_PQct8OUDcoiTZhtpApD2aDxgY=">
+        <div class="player-name">알렉시스 맥 알리스터</div>
+        <div class="player-info">등번호 10<br>포지션 CM</div>
+    </div>
+
+    <!-- 소보슬라이 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/CjPR_cDu5VHtFNk_2lWBzhvq12IWAz0yVNwmv42CQc00EPmrr85xbckVrMwk8T8YbwgQk1pgMmQ70nyw2r_SZ5DZeTdaUz-kux_EWD0TW60CxkYzx1u2WTE_xOfZdI5oPAbzLrSMX2moNpdApTppcQ.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2191079269/photo/london-england-dominik-szoboszlai-of-liverpool-celebrates-scoring-his-teams-third-goal-during.jpg?s=612x612&w=0&k=20&c=yzOq16dDnG1qWdGkTDwUmGQUYEW5ulGqHjnJiXD86GY=">
+        <div class="player-name">도미닉 소보슬라이</div>
+        <div class="player-info">등번호 8<br>포지션 CM</div>
+    </div>
+
+    <!-- 커티스 존스 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/z2gWgSyzQhfykwvGHSpS10QlxpxdnNhxVEOAUPTcj6oGhQGfLD4swyhVGCB1ejNCGgXfklWDfJXP3a6V6VCUx0UtKdxafh9EIr_oqcYmQDCoL4ENLYj6Jl5XLYiidLyr0rX9WNQZaEzTlPkcYqckyg.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/1870704563/photo/liverpool-england-curtis-jones-of-liverpool-celebrates-scoring-their-teams-fifth-goal-during.jpg?s=612x612&w=0&k=20&c=ZjWq72BSJbte6rYhxvk5-xym9ebqzDugzt-why7uwag=">
+        <div class="player-name">커티스 존스</div>
+        <div class="player-info">등번호 17<br>포지션 CM</div>
+    </div>
+
+    <!-- 하비 엘리엇 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/j3NH_rZUHFXPjGHm7V4aCJGFl9G9gcCgea7O7d2K2IhWEmCjq5jOtvjcNaDcpjRwRExkT4kh06NiCXgjq5H19DlcA-hlgdhzP45cA3z91C0oxcId3kAAzvIbT7WXYuiiUoNzhcWA4ET9qO9XNGBVhQ.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/1828642063/photo/liverpool-england-wataru-endo-of-liverpool-celebrates-after-scoring-the-teams-third-goal.jpg?s=612x612&w=0&k=20&c=7z5jRud8Digt7XUpyAxb_gc4THRNxovf7SEesl53raw=">
+        <div class="player-name">엔도 와타루</div>
+        <div class="player-info">등번호 3<br>포지션 RW/CM</div>
+    </div>
+
+    <!-- 가쿤도스 (그라벤버흐) -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/1LNIeHGcvpDj5rllqeg1a9Nua-ugPh99OOsN2fVBuBwr0IJjF-tcV12_J6B7cGKewipnRbaeCOtwvQfSr9FuRqdcFec1Ye7o9RGuqrcjrSdSfIIY615bsWgvViRgvkHrSO2mHM_kjN4Rp4_3gdXETg.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2236399971/photo/liverpool-england-ryan-gravenberch-of-liverpool-celebrates-scoring-his-teams-first-goal.jpg?s=612x612&w=0&k=20&c=OSkyJYgNRMIK7ykKTrCAvyKNFtRtdOODcDHgfCoG9_g=">
+        <div class="player-name">라이언 그라벤베르흐</div>
+        <div class="player-info">등번호 38<br>포지션 CM</div>
+    </div>
+
+    <!-- 디오구 조타 -->
+    <div class="player-card">
+        <img class="player-img" src="https://resources.premierleague.com/premierleague/photos/players/250x250/p194634.png">
+        <img class="hover-img" src="https://media.gettyimages.com/id/1486591341/photo/liverpool-england-diogo-jota-of-liverpool-celebrates-with-teammates-darwin-nunez-and-jordan.jpg?s=612x612&w=0&k=20&c=n77fa3bX3soGWiBuhLLwReOZ7HwqPphfaTUSj7cbTnE=">
+        <div class="player-name">디오구 조타</div>
+        <div class="player-info">등번호 20<br>포지션 LW/ST</div>
+    </div>
+
+    <!-- 루이스 디아스 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/x1umpY6LDAOCNic7QcSQijmSyFa341sFmjSiuw89B36ou6_GNBjaKIjcYdmzv4urSXtX8ROz6n-cK16PjKNECxPXf16OKDivtwg9my8dUHklfqn5XpK56w0W2A9FwNbWX1VHoeSr1EaMMQvDNc0cSw.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2228535050/photo/liverpool-england-florian-wirtz-of-liverpool-runs-with-the-ball-during-the-second-pre-season.jpg?s=612x612&w=0&k=20&c=1JJ3XUE_yP6nkngprpvafb-ACcZLl9KM5DgtYu9Qp2Y=">
+        <div class="player-name">플로리안 비르츠</div>
+        <div class="player-info">등번호 7<br>포지션 LW</div>
+    </div>
+
+    <!-- 코디 각포 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/yWYllb__5VIcESjD1vvR-Wcd-Opzzt9ywBebXAbdELM-WNNRPFfWWEhftsN91VrpVLl80zfM4nw_4RH4nEktrSt0tBtbU99Wu6pCgRnMNaa5w6qqOfo-9q_VMa8vPALfpXTo-dw9CPgF6GMZzI43yw.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2195891083/photo/liverpool-england-cody-gakpo-of-liverpool-celebrates-scoring-his-teams-fourth-goal-during-the.jpg?s=612x612&w=0&k=20&c=lKUw-jcTZh_5hGoZ-JmSYtJD3UYgiVQGm8zVLC1K2K4=">
+        <div class="player-name">코디 각포</div>
+        <div class="player-info">등번호 18<br>포지션 FW</div>
+    </div>
+
+    <!-- 다윈 누녜즈 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/-bEyUie5nl8LGVGZaD7Du7FPsbw1SRhaeVF_YWNcxJMHZynDdhpGgJge_xXpmjc1GOlY-aS7Hp51YR2DHDVP9VGgkPsu-EkDCIEazxCSCYUj5SRTbQ6y7EPE82fSHVmSpSd5GMB7VULwaLFnaKkS9Q.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/1975859489/photo/liverpool-england-conor-bradley-of-liverpool-celebrates-after-scoring-the-second-goal-during.jpg?s=612x612&w=0&k=20&c=9yewv6aF7MqZs5Cgdyal0iQWN1AVYeB55tOuFJeAXD8=">
+        <div class="player-name">코너 브래들리</div>
+        <div class="player-info">등번호 12<br>포지션 RB</div>
+    </div>
+
+    <!-- 모하메드 살라 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/dRIs4hC7-2uhtoTP07CNBiOx3OJ00kS7gii5KB3-bO_OJnpMt5CSHro5JgnZlDawGdGmsOAp9CSLDIlnOAZkD2c-Zih_YJuJoOHNwkLQIHrr_66peBEkVhzrGSFFfMdKw6HkNfwf5R1RUERcQkSTKw.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2212267598/photo/liverpool-england-mohamed-salah-of-liverpool-takes-a-selfie-with-the-fans-as-they-celebrate.jpg?s=612x612&w=0&k=20&c=2MZsL4TqlCgH_qC5lMAaeFO3xwSMp6lkxdvq5x2XIN4=">
+        <div class="player-name">모하메드 살라</div>
+        <div class="player-info">등번호 11<br>포지션 RW</div>
+    </div>
+
+    <!-- 모하메드 살라 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/vmIFL8pIqo0eePgweN79nG08C1qT4qjzIOf-yTb7T3qN5x3Wfaan_lEyEuLmkZJNi4hwZOFS6EcZbOyBxp2FaFJ5XH5g6LEDeDBMhHUuIw-3WdHvSJIYyI5MaNNPKxw4mvChxFQ7zSLgKzbv6CK6Xw.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2230323769/photo/liverpool-england-hugo-ekitike-of-liverpool-celebrates-scoring-his-teams-first-goal-during.jpg?s=612x612&w=0&k=20&c=KtlXS8CdYQeEfApu2xx70qo6GBIZwdyxpAECYl8YeQU=">
+        <div class="player-name">위고 에키티케</div>
+        <div class="player-info">등번호 22<br>포지션 ST</div>
+    </div>
+
+    <!-- 모하메드 살라 -->
+    <div class="player-card">
+        <img class="player-img" src="https://i.namu.wiki/i/55NDK8gVvyQCulLEBT3w9uAsjR1n6kRYViTLW6D6Swg9_ojGVPtic2FQgXUo9ZagSfA36KoTEGAP0UI2BRStC3emdD8O60-jMSj4ppsSVgqOZnvZQkJCVAxwS4zMTXTs-1vMoAiy06Kw97_41NlWlg.webp">
+        <img class="hover-img" src="https://media.gettyimages.com/id/2230330464/photo/liverpool-england-federico-chiesa-of-liverpool-celebrates-scoring-his-teams-third-goal-during.jpg?s=612x612&w=0&k=20&c=LRoifEBcIVNloapmyCfegLDLLgu-rXgVPB1_pSt1zV8=">
+        <div class="player-name">페데리코 키에사</div>
+        <div class="player-info">등번호 14<br>포지션 LW</div>
+    </div>
+
+</div>
+
+</body>
+</html>

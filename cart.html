@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>장바구니</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f7f7f7;
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #c8102e;
+            margin-bottom: 30px;
+        }
+
+        .cart-box {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .remove-btn {
+            color: red;
+            cursor: pointer;
+        }
+
+        .checkout-btn {
+            margin-top: 30px;
+            background-color: #c8102e;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .checkout-btn:hover {
+            background-color: #a00d23;
+        }
+    </style>
+
+    <script>
+        // URL에서 item 파라미터 읽기
+        function getItem() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("item");
+        }
+
+        function removeItem() {
+            document.getElementById("cart-item").innerHTML = "<em>장바구니가 비었습니다.</em>";
+        }
+    </script>
+</head>
+
+<body onload="document.getElementById('item-name').innerText = getItem();">
+
+    <h1>🛒 장바구니</h1>
+
+    <div class="cart-box">
+        <div class="item" id="cart-item">
+            <span id="item-name"></span>
+            <span class="remove-btn" onclick="removeItem()">삭제</span>
+        </div>
+
+        <a class="checkout-btn" href="purchase.html">결제하기 →</a>
+    </div>
+
+</body>
+</html>

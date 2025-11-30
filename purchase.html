@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>결제하기</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #c8102e;
+            margin-bottom: 30px;
+        }
+
+        .form-box {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+            text-align: left;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 12px 0 20px;
+            border-radius: 10px;
+            border: 1px solid #aaa;
+            font-size: 16px;
+        }
+
+        .pay-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #c8102e;
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .pay-btn:hover {
+            background-color: #a00d23;
+        }
+    </style>
+
+    <script>
+        function submitPayment() {
+            alert("결제가 완료되었습니다!\n리버풀 FC를 응원해주셔서 감사합니다 ❤️");
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1>💳 결제 페이지</h1>
+
+    <div class="form-box">
+        <label>이름</label>
+        <input type="text" placeholder="예: 홍길동">
+
+        <label>주소</label>
+        <input type="text" placeholder="배송 받을 주소를 입력하세요">
+
+        <label>카드 번호</label>
+        <input type="text" placeholder="0000-0000-0000-0000">
+
+        <div class="pay-btn" onclick="submitPayment()">결제 완료</div>
+    </div>
+
+</body>
+</html>

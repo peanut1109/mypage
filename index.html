@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>리버풀 FC 홈페이지</title>
+    <style>
+        body { font-family: Arial; background-color: #f2f2f2; text-align: center; }
+        header { background-color: #c8102e; padding: 40px; color: white; }
+        h1 { margin-bottom: 10px; }
+
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 30px;
+        }
+
+        .menu-card {
+            background-color: white;
+            width: 250px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+
+        .menu-card a {
+            text-decoration: none;
+            color: #c8102e;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        header {
+    background-color: #c8102e;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 양 끝으로 정렬 */
+}
+
+.logo {
+     height: 100%;              /* 로고가 헤더 높이에 딱 맞게 */
+    width: auto;               /* 비율 유지 */
+    object-fit: contain;       /* 혹시 잘리는 것 방지 */
+    padding: 0 50px;           /* 좌우 여백(취향 조절 가능) */
+}
+.title-area {
+    display : flex;
+    flex-direction: column; /* ← 핵심 */
+    align-items: center; /* 가운데 정렬 */
+}
+
+.subtitle {
+    margin: 5px 0 0;
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.9;
+}
+.image-section {
+    display: flex;
+    width: 90%;
+    margin: 50px auto;
+    gap: 20px;
+}
+
+.half-img {
+    width: 50%;       /* 반반 */
+    height: auto;    /* 원하는 높이 */
+    object-fit: contain; /* 잘 안 잘리고 꽉 차게 */
+    border-radius: 15px; /* 둥근 모서리 */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+    <!-- 왼쪽 로고 -->
+    <img src="https://th.bing.com/th/id/OIP.Cm7AVPEUj_MWvUHfeSxybAHaHa?w=171&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" class="logo" alt="Liverpool Logo">
+    
+
+    <!-- 가운데 제목 -->
+    <div class="title-area">
+    <h1>Liverpool FC </h1>
+        <p class="subtitle">You’ll Never Walk Alone</p>
+    </div>
+
+    <!-- 오른쪽 로고 -->
+    <img src="https://th.bing.com/th/id/OIP.kmeIbckas9m3prLsriOfwAHaEK?w=280&h=180&c=7&r=0&o=7&cb=ucfimg2&pid=1.7&rm=3&ucfimg=1" class="logo" alt="Adidas Logo">
+    </header>
+
+    <div class="menu-container">
+        <div class="menu-card">
+            <a href="uniforms.html">유니폼</a>
+        </div>
+
+        <div class="menu-card">
+            <a href="matches.html">경기 일정 & 티켓 예약</a>
+        </div>
+
+        <div class="menu-card">
+            <a href="players.html">선수단 & 스텝</a>
+        </div>
+    </div>
+    <div class="image-section">
+    <img src="images/liverpool_champions.jpg" class="half-img" alt="liverpool players">
+    <img src="images/liverpool_champions2.jpg" class="half-img" alt="image2">
+</div>
+
+
+</body>
+</html>
